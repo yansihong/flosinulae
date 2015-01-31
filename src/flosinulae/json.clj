@@ -2,7 +2,6 @@
 ;
 (ns flosinulae.json
   (:import (java.util.zip ZipFile ZipEntry))
-  (:import (javax.jms))
   (require [clojure.data.json :as json]))
 
 (defn show-content
@@ -44,5 +43,4 @@
     (conj (build-cust-json-text filename custcode queue) (create-http-json url))))
 
 (println  (json/write-str(build-cust-json-text "E:/temp/099812391723822.zip" "asdfasdf" "asdf" "http://xxxx:80/mpa/Service/y.do")))
-
 
