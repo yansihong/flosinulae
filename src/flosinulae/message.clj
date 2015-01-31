@@ -51,8 +51,3 @@
                 (finally ()))
               (recur)))))
       (.close connection))))
-
-(defn -main [& m]
-  (tibco-jms-receive "tcp://10.3.37.48:7222" "TST.PDA.RECV.CNL" "emspda" "emspda" parse-message))
-
-(tibco-jms-receive "tcp://10.3.37.48:7222" "TST.PDA.RECV.CNL" "emspda" "emspda" parse-message)
